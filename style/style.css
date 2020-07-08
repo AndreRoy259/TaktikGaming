@@ -136,6 +136,10 @@ body {
   background-color: #e34a4f;
 }
 
+.nav-icon {
+  width: 30px;
+}
+
 .scroll-down-icon {
   position: absolute;
   bottom: 1rem;
@@ -153,9 +157,10 @@ body {
 .section-title {
   margin: 0;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   color: var(--taktik-red);
+  -webkit-text-stroke: 0.25px var(--taktik-pale-grey);
 }
 
 .section-title.accent {
@@ -208,7 +213,9 @@ body {
 }
 
 .section-accent {
-  background-color: var(--taktik-red);
+  background: url("../images/shutterstock_511268581-lg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .form {
@@ -217,7 +224,7 @@ body {
 }
 
 .form label {
-  color: black;
+  color: var(--taktik-red);
   font-weight: bold;
 }
 
@@ -266,11 +273,12 @@ body {
 
 .pricing-card {
   padding: 1rem;
-  background-color: #dcf4ff;
+  background-color: var(--taktik-black);
   border: 1px solid black;
   border-radius: 0.3em;
   margin: 1rem 0;
   max-width: 50vh;
+  color: var(--taktik-pale-grey);
   -webkit-transition: -webkit-transform 100ms;
   transition: -webkit-transform 100ms;
   transition: transform 100ms;
@@ -283,7 +291,6 @@ body {
 }
 
 .pricing-card.accent {
-  background-color: white;
   margin: 0;
 }
 
@@ -477,7 +484,10 @@ body {
     row-gap: 30px;
   }
   .full-screen-header {
-    background-position-x: 65%;
+    background-position-x: 25%;
+  }
+  .title {
+    margin-top: 20%;
   }
   .pricing-cards-container {
     -ms-flex-wrap: wrap;
