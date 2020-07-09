@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -28,7 +28,7 @@ body {
   --taktik-pale-grey: #c7c8cb;
 
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--taktik-black);
 }
 
@@ -134,7 +134,7 @@ body {
 
 .scroll-down-icon {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   width: 60px;
 
   animation: scroll-down-bounce

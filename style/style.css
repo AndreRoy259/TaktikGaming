@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -26,7 +26,7 @@ body {
   --taktik-full-white: #ffffff;
   --taktik-pale-grey: #c7c8cb;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--taktik-black);
 }
 
@@ -142,7 +142,7 @@ body {
 
 .scroll-down-icon {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   width: 60px;
   -webkit-animation: scroll-down-bounce calc(var(--scroll-down-duration) + var(--scroll-down-delay)) 1s alternate infinite linear, scroll-down-enter var(--scroll-down-duration) var(--scroll-down-delay) backwards;
           animation: scroll-down-bounce calc(var(--scroll-down-duration) + var(--scroll-down-delay)) 1s alternate infinite linear, scroll-down-enter var(--scroll-down-duration) var(--scroll-down-delay) backwards;
