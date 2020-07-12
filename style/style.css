@@ -106,11 +106,7 @@ body {
 
 .title {
   font-size: 5rem;
-  margin: 0;
-  margin-top: 10%;
-  -webkit-text-stroke: 0.5px var(--taktik-full-black);
-  -webkit-animation: title-enter var(--title-duration);
-          animation: title-enter var(--title-duration);
+  margin: 10% 0 0 0;
 }
 
 .glow {
@@ -120,7 +116,26 @@ body {
           filter: blur(0.75px);
   font-weight: 100;
   text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 40px #cc181e, 0 0 80px #cc181e, 0 0 160px #cc181e;
-  -webkit-text-stroke: 0.5px var(--taktik-full-black);
+  -webkit-animation: glow-anim 2.5s ease-in-out infinite;
+          animation: glow-anim 2.5s ease-in-out infinite;
+}
+
+.neon-red {
+  font-family: "Michroma", sans-serif;
+  text-transform: uppercase;
+  -webkit-filter: blur(0.75px);
+          filter: blur(0.75px);
+  font-weight: 100;
+  text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 40px #cc181e, 0 0 80px #cc181e, 0 0 160px #cc181e;
+}
+
+.neon-white {
+  font-family: "Michroma", sans-serif;
+  text-transform: uppercase;
+  -webkit-filter: blur(0.75px);
+          filter: blur(0.75px);
+  font-weight: 100;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 160px white;
 }
 
 .sub-title {
@@ -176,7 +191,7 @@ body {
 }
 
 .section-title.accent {
-  color: var(--taktik-red);
+  color: var(--taktik-full-white);
 }
 
 .curriculum-grid {
@@ -486,6 +501,26 @@ body {
   from {
     -webkit-transform: scale(0) rotate(180deg);
             transform: scale(0) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes glow-anim {
+  0%,
+  100% {
+    text-shadow: 0 0 0px #cc181e, 0 0 0px #cc181e, 0 0 0px #cc181e, 0 0 0px #cc181e, 0 0 0px #cc181e;
+  }
+  50% {
+    text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 40px #cc181e, 0 0 80px #cc181e, 0 0 160px #cc181e;
+  }
+}
+
+@keyframes glow-anim {
+  0%,
+  100% {
+    text-shadow: 0 0 0px #cc181e, 0 0 0px #cc181e, 0 0 0px #cc181e, 0 0 0px #cc181e, 0 0 0px #cc181e;
+  }
+  50% {
+    text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 40px #cc181e, 0 0 80px #cc181e, 0 0 160px #cc181e;
   }
 }
 
