@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -106,8 +108,19 @@ body {
   font-size: 5rem;
   margin: 0;
   margin-top: 10%;
+  -webkit-text-stroke: 0.5px var(--taktik-full-black);
   -webkit-animation: title-enter var(--title-duration);
           animation: title-enter var(--title-duration);
+}
+
+.glow {
+  font-family: "Michroma", sans-serif;
+  text-transform: uppercase;
+  -webkit-filter: blur(0.75px);
+          filter: blur(0.75px);
+  font-weight: 100;
+  text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 40px #cc181e, 0 0 80px #cc181e, 0 0 160px #cc181e;
+  -webkit-text-stroke: 0.5px var(--taktik-full-black);
 }
 
 .sub-title {
@@ -149,9 +162,9 @@ body {
 }
 
 .section {
-  color: var(--taktik-red);
+  color: var(--taktik-pale-grey);
   background-color: var(--taktik-black);
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .section-title {
@@ -160,11 +173,10 @@ body {
   font-size: 2.5rem;
   text-align: center;
   color: var(--taktik-red);
-  -webkit-text-stroke: 0.25px var(--taktik-pale-grey);
 }
 
 .section-title.accent {
-  color: var(--taktik-black);
+  color: var(--taktik-red);
 }
 
 .curriculum-grid {
@@ -224,7 +236,7 @@ body {
 }
 
 .form label {
-  color: var(--taktik-red);
+  color: var(--taktik-pale-grey);
   font-weight: bold;
 }
 
@@ -251,7 +263,7 @@ body {
 
 .form input:focus,
 .form textarea:focus {
-  border-color: #0af;
+  border-color: var(--taktik-red);
 }
 
 .btn-container {
@@ -487,7 +499,11 @@ body {
     background-position-x: 25%;
   }
   .title {
+    font-size: 3rem;
     margin-top: 20%;
+  }
+  .sub-title, .section-title {
+    font-size: 2rem;
   }
   .pricing-cards-container {
     -ms-flex-wrap: wrap;
