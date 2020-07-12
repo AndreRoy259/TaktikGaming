@@ -502,7 +502,8 @@ body {
     font-size: 3rem;
     margin-top: 20%;
   }
-  .sub-title, .section-title {
+  .sub-title,
+  .section-title {
     font-size: 2rem;
   }
   .pricing-cards-container {
