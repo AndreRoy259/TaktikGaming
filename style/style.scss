@@ -22,6 +22,7 @@ body {
   --scroll-down-delay: var(--nav-delay);
 
   --taktik-red: #cc181e;
+  --taktik-pale-red: #e73238;
   --taktik-black: #121316;
   --taktik-dark-grey: #1e1f24;
   --taktik-grey: #121316;
@@ -119,7 +120,7 @@ body {
   animation: glow-anim 2.5s ease-in-out infinite;
 }
 
-.neon-red{
+.neon-red {
   font-family: "Michroma", sans-serif;
 
   text-transform: uppercase;
@@ -130,10 +131,9 @@ body {
     0 0 160px rgba(204, 24, 30, 1);
 
   // -webkit-text-stroke: 0.5px var(--taktik-full-black);
-
 }
 
-.neon-white{
+.neon-white {
   font-family: "Michroma", sans-serif;
 
   text-transform: uppercase;
@@ -144,7 +144,6 @@ body {
     0 0 160px rgba(255, 255, 255, 1);
 
   // -webkit-text-stroke: 0.5px var(--taktik-full-black);
-
 }
 
 .sub-title {
@@ -387,6 +386,54 @@ body {
   box-shadow: 0 2px 5px 1px black;
 }
 
+//! Neon Scroll Progress Bar
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+    height: 100%;
+
+  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  // animation: scroll-anim 5s linear infinite;
+}
+
+#progressbar:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  filter: blur(10px);
+}
+
+#progressbar:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  filter: blur(30px);
+}
+
+//! Animations Keyframes
 @keyframes scroll-down-bounce {
   from {
     transform: translateY(0);
@@ -437,20 +484,31 @@ body {
   }
 }
 
-@keyframes glow-anim{
+@keyframes glow-anim {
   0%,
-  100%{
-      text-shadow: 0 0 0px rgba(204, 24, 30, 1), 0 0 0px rgba(204, 24, 30, 1),
-    0 0 0px rgba(204, 24, 30, 1), 0 0 0px rgba(204, 24, 30, 1),
-    0 0 0px rgba(204, 24, 30, 1);
+  100% {
+    text-shadow: 0 0 0px rgba(204, 24, 30, 1), 0 0 0px rgba(204, 24, 30, 1),
+      0 0 0px rgba(204, 24, 30, 1), 0 0 0px rgba(204, 24, 30, 1),
+      0 0 0px rgba(204, 24, 30, 1);
   }
-  50%{
-          text-shadow: 0 0 10px rgba(204, 24, 30, 1), 0 0 20px rgba(204, 24, 30, 1),
-    0 0 40px rgba(204, 24, 30, 1), 0 0 80px rgba(204, 24, 30, 1),
-    0 0 160px rgba(204, 24, 30, 1);
+  50% {
+    text-shadow: 0 0 10px rgba(204, 24, 30, 1), 0 0 20px rgba(204, 24, 30, 1),
+      0 0 40px rgba(204, 24, 30, 1), 0 0 80px rgba(204, 24, 30, 1),
+      0 0 160px rgba(204, 24, 30, 1);
   }
 }
 
+@keyframes scroll-anim {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+}
+
+//! Mobile View
 @media (max-width: 700px) {
   .curriculum-grid {
     grid-template-columns: minmax(auto, 450px);

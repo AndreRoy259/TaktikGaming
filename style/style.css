@@ -21,6 +21,7 @@ body {
   --btn-grow-delay: var(--nav-delay);
   --scroll-down-delay: var(--nav-delay);
   --taktik-red: #cc181e;
+  --taktik-pale-red: #e73238;
   --taktik-black: #121316;
   --taktik-dark-grey: #1e1f24;
   --taktik-grey: #121316;
@@ -390,6 +391,55 @@ body {
           box-shadow: 0 2px 5px 1px black;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--taktik-red)), to(var(--taktik-pale-red)));
+  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+}
+
+#progressbar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--taktik-red)), to(var(--taktik-pale-red)));
+  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+#progressbar:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--taktik-red)), to(var(--taktik-pale-red)));
+  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
 @-webkit-keyframes scroll-down-bounce {
   from {
     -webkit-transform: translateY(0);
@@ -521,6 +571,30 @@ body {
   }
   50% {
     text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 40px #cc181e, 0 0 80px #cc181e, 0 0 160px #cc181e;
+  }
+}
+
+@-webkit-keyframes scroll-anim {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(90deg);
+            filter: hue-rotate(90deg);
+  }
+}
+
+@keyframes scroll-anim {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(90deg);
+            filter: hue-rotate(90deg);
   }
 }
 
