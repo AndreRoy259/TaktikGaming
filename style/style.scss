@@ -82,6 +82,7 @@ body {
   padding: 0;
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
 
 .nav-list a {
@@ -156,7 +157,7 @@ body {
 }
 
 .btn {
-  background-color: hsl(358, 73%, 49%);
+  background-color: var(--taktik-red);
   color: white;
   border-radius: 5px;
   padding: 0.25em 1em;
@@ -170,7 +171,7 @@ body {
 
 .btn:hover,
 .btn:focus {
-  background-color: hsl(358, 73%, 59%);
+  background-color: var(--taktik-pale-red);
 }
 
 .nav-icon {
@@ -242,11 +243,109 @@ body {
   margin-right: 1rem;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-height: 100vh;
+  flex-wrap: wrap;
+  // background: #010615; //TODO: Delete to Get the Image Background
+  z-index: 1;
+}
+
+.box {
+  position: relative;
+  width: 400px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  // background: #060c21;
+  background: var(--taktik-grey);
+  margin: 40px;
+  text-align: center;
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.box:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.box:nth-child(1):before,
+.box:nth-child(1):after {
+  // background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+  background: linear-gradient(
+    235deg,
+    var(--taktik-red),
+    var(--taktik-black),
+    var(--taktik-pale-red)
+  );
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after {
+  // background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+  background: linear-gradient(
+    235deg,
+    var(--taktik-pale-grey),
+    var(--taktik-black),
+    var(--taktik-full-white)
+  );
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3):after {
+  // background: linear-gradient(235deg, #772aff, #010615, #2196f3);
+  background: linear-gradient(
+    235deg,
+    var(--taktik-red),
+    var(--taktik-black),
+    var(--taktik-pale-red)
+  );
+}
+
+.box .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box .content {
+  padding: 20px;
+  color: #fff;
+}
+
 .section-accent {
   // background-color: var(--taktik-red);
   background: url("../images/shutterstock_511268581-lg.jpg");
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
 }
 
 .form {
@@ -282,7 +381,7 @@ body {
 
 .form input:focus,
 .form textarea:focus {
-  border-color: var(--taktik-red);
+  border-color: var(--taktik-pale-red);
 }
 
 .btn-container {
@@ -383,7 +482,7 @@ body {
 
 .btn-grow:hover {
   transform: scale(1.1);
-  box-shadow: 0 2px 5px 1px black;
+  box-shadow: 0 2px 5px 1px var(--taktik-red);
 }
 
 //! Neon Scroll Progress Bar
@@ -405,31 +504,43 @@ body {
   top: 0;
   right: 0;
   width: 10px;
-    height: 100%;
+  height: 100%;
 
-  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  background: linear-gradient(
+    to top,
+    var(--taktik-red),
+    var(--taktik-pale-red)
+  );
   // animation: scroll-anim 5s linear infinite;
 }
 
-#progressbar:before{
-  content: '';
+#progressbar:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  background: linear-gradient(
+    to top,
+    var(--taktik-red),
+    var(--taktik-pale-red)
+  );
   filter: blur(10px);
 }
 
-#progressbar:after{
-  content: '';
+#progressbar:after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, var(--taktik-red), var(--taktik-pale-red));
+  background: linear-gradient(
+    to top,
+    var(--taktik-red),
+    var(--taktik-pale-red)
+  );
   filter: blur(30px);
 }
 
