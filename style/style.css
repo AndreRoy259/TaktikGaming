@@ -113,6 +113,34 @@ body {
   margin: 10% 0 0 0;
 }
 
+.under-construction {
+  font-size: 1.5rem;
+  margin: 5% 10%;
+  padding: 2%;
+  color: var(--taktik-pale-grey);
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 10px #cc181e;
+          box-shadow: 0 0 10px #cc181e;
+}
+
+.under-construction p {
+  text-shadow: 0 0 25px var(--taktik-ful);
+}
+
+.under-construction-accent-txt {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: "Michroma", sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  -webkit-filter: blur(0.75px);
+          filter: blur(0.75px);
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 160px white;
+}
+
 .glow {
   font-family: "Michroma", sans-serif;
   text-transform: uppercase;
@@ -146,6 +174,11 @@ body {
   font-size: 2.5rem;
   margin-top: 0.3rem;
   margin-bottom: 1rem;
+  color: var(--taktik-pale-grey);
+  text-shadow: 0 0 10px white;
+  text-transform: uppercase;
+  font-family: "Michroma", sans-serif;
+  letter-spacing: 10px;
   -webkit-animation: sub-title-enter var(--sub-title-duration) var(--sub-title-delay) backwards;
           animation: sub-title-enter var(--sub-title-duration) var(--sub-title-delay) backwards;
 }
@@ -695,6 +728,12 @@ body {
 }
 
 @media (max-width: 700px) {
+  .under-construction {
+    padding: 10%;
+  }
+  .under-construction p {
+    font-size: 0.75rem;
+  }
   .curriculum-grid {
     -ms-grid-columns: minmax(auto, 450px);
         grid-template-columns: minmax(auto, 450px);
@@ -704,12 +743,12 @@ body {
     background-position-x: 25%;
   }
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 20%;
   }
   .sub-title,
   .section-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
   .pricing-cards-container {
     -ms-flex-wrap: wrap;
