@@ -729,7 +729,8 @@ body {
 
 @media (max-width: 700px) {
   .under-construction {
-    padding: 10%;
+    padding: 5%;
+    margin: 1%;
   }
   .under-construction p {
     font-size: 0.75rem;
