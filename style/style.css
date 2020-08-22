@@ -423,6 +423,10 @@ body {
   border-radius: 0.3em;
 }
 
+.btn-lg {
+  font-size: 2rem;
+}
+
 .btn-disabled {
   background-color: var(--taktik-pale-grey);
   color: var(--taktik-grey);
