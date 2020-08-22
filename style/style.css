@@ -362,7 +362,7 @@ body {
 }
 
 .social-img {
-  margin: 20px 50px 50px;
+  margin: 50px 50px 0px;
 }
 
 .section-accent {
@@ -421,6 +421,15 @@ body {
 
 .btn-square {
   border-radius: 0.3em;
+}
+
+.btn-disabled {
+  background-color: var(--taktik-pale-grey);
+  color: var(--taktik-grey);
+}
+
+.btn-disabled:hover {
+  cursor: not-allowed;
 }
 
 .pricing-cards-container {

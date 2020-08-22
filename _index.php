@@ -208,14 +208,9 @@
           </a>
         </div>
 
-        <div class="social-img"> <a href="mailto:info@taktikgaming.com" target="_blank">
-            <img src="./images/gmail.png" alt="mail">
-          </a>
-        </div>
-
       </div>
 
-      <!-- <form class="form" method="POST">
+      <!-- <form class="form" method="POST" netlify>
         <label for="name">Nom</label>
         <input type="text" name="name" id="name" required />
         <label for="email">Courriel</label>
@@ -229,13 +224,13 @@
         </div>
       </form> -->
 
-      <!-- <form class="form" action="contactform.php" method="POST">
+      <form class="form" action="contactform.php" method="POST">
         <input type="text" name="name" placeholder="Full name" required />
         <input type="email" name="mail" placeholder="Your e-mail" required />
         <input type="text" name="subject" placeholder="Subject" required />
         <textarea name="message" placeholder="Message" required></textarea>
         <button class="btn btn-square btn-grow" type="submit">SEND MAIL</button>
-      </form> -->
+      </form>
 
     </section>
   </main>
