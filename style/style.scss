@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -201,7 +200,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: inherit;
-
+  text-align: center;
   transition: 100ms;
 }
 
@@ -261,7 +260,6 @@ body {
   text-decoration: none;
   /* color: black; */
   color: hsl(200, 100%, 30%);
-
   transition: 250ms;
 }
 
@@ -409,7 +407,6 @@ body {
   padding: 0.5em;
   color: inherit;
   font-family: inherit;
-
   transition: border-color 100ms;
 }
 
@@ -459,7 +456,6 @@ body {
   margin: 1rem 0;
   max-width: 50vh;
   color: var(--taktik-pale-grey);
-
   transition: transform 100ms;
 }
 
