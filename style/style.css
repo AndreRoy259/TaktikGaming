@@ -361,6 +361,14 @@ body {
   color: #fff;
 }
 
+.fb-post {
+  color: red;
+}
+
+.fb-post p {
+  color: red;
+}
+
 .social-img {
   margin: 50px 50px 0px;
 }
