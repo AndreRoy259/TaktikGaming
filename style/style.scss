@@ -4,8 +4,10 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -370,14 +372,12 @@ body {
 .box .content {
   padding: 20px;
   color: #fff;
+  width: 100%;
 }
 
 //TODO: Change the color of the text to white
 .fb-post {
-  color: red;
-  p {
-    color: red;
-  }
+  background-color: var(--taktik-pale-grey);
 }
 
 .social-img {
